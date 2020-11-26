@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Login
-        run: docker login -u jjno91 -p $CR_PAT ghcr.io
+        run: docker login -u api -p $CR_PAT ghcr.io
       - name: Build
         run: docker build -t ghcr.io/realmgame/terraform:latest terraform
       - name: Push
